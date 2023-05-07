@@ -2,9 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.11.
 
-## Development server
+## Teszt felhasználók: (mindegyikhez 'jelszo' a jelszó)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+teszt1@gmail.com
+jelszo
+
+teszt2@gmail.com
+jelszo
+
+teszt3@gmail.com
+jelszo
+
+teszt4@gmail.com
+jelszo
 
 ## Itt tudsz elérni engem, ha bármi probléma adódik:
 Discord:  FNT#1444 <br/>
