@@ -1,0 +1,18 @@
+.mat-toolbar {
+    position: fixed;
+    min-height: 2.2em !important;
+    height: 2.2em !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+:host ::ng-deep .mat-badge-content {
+  background-color: #34b0f8;
+   
+}

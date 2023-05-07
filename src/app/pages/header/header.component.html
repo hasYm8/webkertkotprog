@@ -1,0 +1,16 @@
+<mat-toolbar [ngStyle]="{'background-color': toolbarBgColor}">
+    <mat-toolbar-row>
+        <a [routerLink]="'base'" [ngStyle]="{'color': toolbarTextColor}">iChat</a>
+        <span class="example-spacer"></span>
+        <div *ngIf="isLoggedIn">
+            <button mat-icon-button class="example-icon" aria-label="Friendlist icon"
+                (click)="open_friend_controller()">
+                <mat-icon matBadgeColor="warn"  >supervisor_account</mat-icon>
+            </button>
+
+            <button mat-icon-button class="example-icon" aria-label="Logout icon" (click)="signOut()">
+                <mat-icon>logout</mat-icon>
+            </button>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

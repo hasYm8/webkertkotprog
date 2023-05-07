@@ -1,0 +1,26 @@
+.container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.message-data{
+    width: 50%;
+    margin: 0;
+    float: left;
+    height: auto;
+    border-radius: 20px;
+    background-color: rgba(251, 251, 253, 0.6);
+    text-align: center;
+}
+
+.message {
+    width: 100%;
+    word-wrap: break-word;
+    font-weight: 410;
+    margin: 0;
+}
+
+.time {
+    color: grey;
+}

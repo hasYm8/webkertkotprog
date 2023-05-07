@@ -1,0 +1,6 @@
+<div class="container">
+    <div [ngStyle]="{ 'float': isMyMessage ? 'right' : 'left', 'background-color': isMyMessage ? 'rgba(1, 100, 250, 0.6)' : 'rgba(251, 251, 253, 0.6)' }" class="message-data">
+        <p [ngStyle]="{ 'color': isMyMessage ? '#F5F5F5' : 'black' }" class="message">{{text}}</p>
+        <p [ngStyle]="{ 'color': isMyMessage ? 'lightgrey' : 'grey' }" class="time">{{time | date}}</p>
+    </div>
+</div>

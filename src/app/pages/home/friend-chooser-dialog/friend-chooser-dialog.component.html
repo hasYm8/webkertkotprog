@@ -1,0 +1,8 @@
+<mat-form-field appearance="fill">
+    <mat-label>Friend</mat-label>
+    <mat-select [(value)]="selectedFriend_uid">
+        <mat-option *ngFor="let friend of this.friendService.friends" [value]="friend.user_uid" (click)="dialogRef.close(selectedFriend_uid)">
+            {{friend.displayName}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>

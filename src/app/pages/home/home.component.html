@@ -1,0 +1,42 @@
+<div class="home-container">
+    <div class="contact-area">
+        <div *ngFor="let friend of this.friendService.friends">
+            <app-friend (changeChosenFriend)="changeChosenFriend($event)" [displayName]="friend.displayName"
+                [user_uid]="friend.user_uid" [ngStyle]="{'background-color':'green'}"></app-friend>
+        </div>
+    </div>
+    <div class="message-area">
+        <button id="change-friend-button" type="submit" mat-button color="primary" (click)="open_friend_chooser_controller()">
+            <mat-icon [ngStyle]="{'color':'rgb(1, 115, 250)'}">assignment_ind</mat-icon>
+        </button>
+        
+        <div *ngIf="this.chosenFriendUser_uid != ''" style="width: 100%; height: 100%;">
+
+            <div id="message-area-header">
+                <h1>{{this.chosenFriendDisplayName}}</h1>
+            </div>
+
+            <div #messageArea id="message-area-messages">
+                <div *ngFor="let message of this.messageService.messages">
+                    <app-message [text]="message.text" [time]="message.time"
+                        [isMyMessage]="message.receiver_uid === this.chosenFriendUser_uid"></app-message>
+                </div>
+            </div>
+
+            <div id="message-area-send">
+                <form class="message-form">
+                    <mat-form-field class="message-form-field" appearance="fill">
+                        <mat-label>Message</mat-label>
+                        <input matInput [(ngModel)]="message" name="message" maxlength="100">
+                        <mat-hint align="end">{{message.length}} / 100</mat-hint>
+                    </mat-form-field>
+
+                    <button id="send-button" type="submit" mat-button color="primary" (click)="sendMessage()">
+                        <mat-icon [ngStyle]="{'color':'rgb(1, 115, 250)'}">send</mat-icon>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

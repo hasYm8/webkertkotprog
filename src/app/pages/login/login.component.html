@@ -1,0 +1,23 @@
+<div class="container">
+    <img src="../../../assets/circle_logo.png" alt="Chat gif" width="180px" height="180px">
+
+    <h1>Sign in with Email</h1>
+
+    <form [formGroup]="signInForm" class="form">
+        <mat-form-field class="form-field">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email" placeholder="email">
+            <mat-error *ngIf="signInForm.controls['email'].hasError('email')">Enter a valid email</mat-error>
+        </mat-form-field>
+        
+        <mat-form-field class="form-field">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="password" placeholder="Password">
+            <mat-error *ngIf="signInForm.controls['password'].hasError('minlength')">Password is too short</mat-error>
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button color="accent" (click)="signIn()">Sign In</button>
+    <br>
+    <a routerLink="/register">Register an account</a>
+</div>

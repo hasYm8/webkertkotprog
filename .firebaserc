@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "webkert-kotprog-cf20b": {
+      "hosting": {
+        "ichat": [
+          "webkert-kotprog-cf20b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "webkert-kotprog-cf20b"
+  }
+}
