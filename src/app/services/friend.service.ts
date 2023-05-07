@@ -81,6 +81,7 @@ export class FriendService {
                 friendShipId: friendShipId,
                 since: friendShip.since
               }
+              
               tempFriends.push(friend);
             });
           }
